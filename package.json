@@ -6,9 +6,10 @@
   "type": "commonjs",
   "scripts": {
     "build": "tsc --noEmit && tsup",
-    "start": "tsnd -r tsconfig-paths/register --files --transpile-only ./src/main.ts",
-    "start:prod": "node dist/main",
+    "start": "node dist/main.js",
+    "start:prod": "node dist/main.js",
     "dev:server": "tsnd -r tsconfig-paths/register --files --transpile-only --respawn --ignore-watch node_modules ./src/main.ts",
+    "railway:build": "npm run db:generate && npm run build",
     "test": "tsnd -r tsconfig-paths/register --files --transpile-only --respawn --ignore-watch node_modules ./test/all.test.ts",
     "lint": "eslint --fix --ext .ts src",
     "lint:check": "eslint --ext .ts src",

@@ -8,6 +8,16 @@
 
 .vscode
 
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep Railway template
+!.env.railway
+
 # Logs
 logs/**.json
 *.log
